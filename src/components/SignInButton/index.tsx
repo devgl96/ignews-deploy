@@ -8,8 +8,6 @@ import styles from "./styles.module.scss";
 export function SignInButton() {
   const { data: session } = useSession(); //Verifica se o usuário está em uma sessão
 
-  console.log("session: ", session);
-
   return session ? (
     <button
       type="button"
