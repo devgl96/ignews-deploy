@@ -1,7 +1,6 @@
 import * as Prismic from "@prismicio/client";
-import { IncomingMessage } from "http";
 
-export function getPrismicClient(ref?: string | IncomingMessage) {
+export function getPrismicClient(ref?: any) {
   const endpoint = Prismic.getRepositoryEndpoint("ignewsgl");
 
   const prismic = Prismic.createClient(endpoint, {
