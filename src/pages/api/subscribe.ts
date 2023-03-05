@@ -21,10 +21,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     // Cookie disponível no mesmo domínio
     const session = await getSession({ req });
 
-    const { email }: any = session?.user;
-
     const user = await fauna.query<User>(
-      q.Get(q.Match(q.Index("user_by_email"), q.Casefold(email)))
+      q.Get(
+        q.Match(
+          q.Index("user_by_email"),
+          q.Casefold(String(session?.user?.email))
+        )
+      )
     );
 
     let customerId = user.data.stripe_customer_id;
@@ -33,7 +36,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       // Se não existir customerId no FaunaDB
 
       const stripeCustomer = await stripe.customers.create({
-        email,
+        email: String(session?.user?.email),
         // metadata
       });
 
@@ -60,8 +63,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ],
       mode: "subscription",
       allow_promotion_codes: true,
-      success_url: String(process.env.STRIPE_SUCCESS_URL),
-      cancel_url: String(process.env.STRIPE_CANCEL_URL),
+      success_url: "http://localhost:3000/posts",
+      cancel_url: "http://localhost:3000/",
     });
 
     return res.status(200).json({ sessionId: stripeCheckoutSession.id });
