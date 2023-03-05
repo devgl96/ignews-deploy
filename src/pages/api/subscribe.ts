@@ -63,8 +63,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ],
       mode: "subscription",
       allow_promotion_codes: true,
-      success_url: "http://localhost:3000/posts",
-      cancel_url: "http://localhost:3000/",
+      success_url: "https://ignews-gl-deploy.vercel.app/posts",
+      cancel_url: "https://ignews-gl-deploy.vercel.app/",
     });
 
     return res.status(200).json({ sessionId: stripeCheckoutSession.id });
