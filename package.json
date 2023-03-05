@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prismicio/client": "^6.7.3",
     "@stripe/stripe-js": "^1.48.0",
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",

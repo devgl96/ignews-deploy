@@ -103,6 +103,35 @@
     "tiny-glob" "^0.2.9"
     "tslib" "^2.4.0"
 
+"@prismicio/client@^6.7.3":
+  "integrity" "sha512-zQVZhuQDYIgdaY636u+QNk2tvvbtpkaKsEiLT0Ef51nFW/y5fqpOG5U0eU3cVsikZaYNlZ17x6O1wmvVCLdimQ=="
+  "resolved" "https://registry.npmjs.org/@prismicio/client/-/client-6.7.3.tgz"
+  "version" "6.7.3"
+  dependencies:
+    "@prismicio/helpers" "^2.3.8"
+    "@prismicio/types" "^0.2.7"
+
+"@prismicio/helpers@^2.3.8":
+  "integrity" "sha512-p7Y1sG83A2YPZvptfAzuZA8xH1bdM2wGRjqSKW9Qa0rAnBq2OfVKRvwl9OMCZML4eLUMxSEUAEWRVSoKpQnJvA=="
+  "resolved" "https://registry.npmjs.org/@prismicio/helpers/-/helpers-2.3.9.tgz"
+  "version" "2.3.9"
+  dependencies:
+    "@prismicio/richtext" "^2.1.4"
+    "@prismicio/types" "^0.2.7"
+    "imgix-url-builder" "^0.0.3"
+
+"@prismicio/richtext@^2.1.4":
+  "integrity" "sha512-hyC8XItj+2yMmLGNjg9xGA/lRMO5UgbPF132VFrpZHzHhtIKvHN3iYxCZxnrEoPaTcT6JjA8vWyYLjmmB49bvw=="
+  "resolved" "https://registry.npmjs.org/@prismicio/richtext/-/richtext-2.1.4.tgz"
+  "version" "2.1.4"
+  dependencies:
+    "@prismicio/types" "^0.2.7"
+
+"@prismicio/types@^0.2.7":
+  "integrity" "sha512-xHPBWg+lPcl8U97VB/2oYK3MJlQoVPZq91hbeQO8WRyvq+zgpNST3xFOTk8SkQpgoH6wd50AxGZELvPrpojajQ=="
+  "resolved" "https://registry.npmjs.org/@prismicio/types/-/types-0.2.7.tgz"
+  "version" "0.2.7"
+
 "@rushstack/eslint-patch@^1.1.3":
   "integrity" "sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg=="
   "resolved" "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz"
@@ -1218,6 +1247,11 @@
   "integrity" "sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ=="
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz"
   "version" "5.2.4"
+
+"imgix-url-builder@^0.0.3":
+  "integrity" "sha512-8Oc2Cn4+jF06sEfJcVPlWYfD2F6RjrwIMbk1xEzux8unoB5LsvFc/GL1BQ47HPaeE12ReX2nMUcjUslGYWLxHA=="
+  "resolved" "https://registry.npmjs.org/imgix-url-builder/-/imgix-url-builder-0.0.3.tgz"
+  "version" "0.0.3"
 
 "immutable@^4.0.0":
   "integrity" "sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w=="
