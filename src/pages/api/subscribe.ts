@@ -34,7 +34,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     if (!customerId) {
       // Se não existir customerId no FaunaDB
-
       const stripeCustomer = await stripe.customers.create({
         email: String(session?.user?.email),
         // metadata
@@ -63,8 +62,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ],
       mode: "subscription",
       allow_promotion_codes: true,
-      success_url: "https://ignews-gl-deploy.vercel.app/posts",
-      cancel_url: "https://ignews-gl-deploy.vercel.app/",
+      success_url: "http://localhost:3000/posts",
+      cancel_url: "http://localhost:3000/",
     });
 
     return res.status(200).json({ sessionId: stripeCheckoutSession.id });
